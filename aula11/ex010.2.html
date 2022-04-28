@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governo</title>
+    <style>
+        input#país{
+            background-color: #e4c5e4;
+        }
+    </style>
+</head>
+
+<body>
+    <h1><strong>Descubra sua Nacionalidade</strong></h1>
+
+    Digite seu país de Nascimento: <input type="text" name="país" id="país">
+    <input type="button" value="Pesquisar" onclick="pesquisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function pesquisar() {
+            var vel = document.querySelector('input#país').value
+            var res = document.querySelector('div#res')
+            
+            res.innerHTML = `<p>Voce nasceu em <strong>${vel}</strong><p/>`
+
+            if (vel == 'Brasil') {
+                res.innerHTML += '<p>Voce é <strong>Brasileiro</strong></p>'
+            } else {
+                res.innerHTML += '<p>Voce é <strong>Estrangeiro</strong></p>'
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

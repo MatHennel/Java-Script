@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Teste</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"> 
+</head>
+<style>
+    body{
+        background-color: aqua;
+        color: rgb(255, 0, 0);
+        font:normal 18pt Ariel;
+        }
+    h1{
+        color: burlywood;
+         }
+    div#luffy{
+        font: normal 30pt italic;
+        background-color: rgb(168, 166, 12);
+        width: 150px;
+        height: 100px;
+        line-height: 40px;
+        text-align: center;
+        
+    }     
+</style>
+
+<body>
+    <h1>Sanji foi capiturado</h1>
+       <p>Sanji recebeu um convite para casar-se com a filha da Yonkou,Big Mom,mas o convite era d meras formal
+        pois ele terá que ir de qualquer jeito!</p>
+        <br/>
+        <br/>
+       <p><strong>Luffy</strong> nao concorda com a decisao e irá em busca de seu companheiro,para isso terá que bolar um plano perfeito,
+          pois , será dificil trazer-lo d volta , devido a enorme força e da quantidade dos seus subordinados(Big mom)</p>
+           <br/>
+          <div id='luffy'>Luffy irá permitir?</div>
+          <!--onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"-->
+     
+    <script>
+     var p1 = document.getElementsByTagName('p')[0]
+     var p2 = window.document.getElementsByTagName('p')[1]
+     var corpo = window.document.body
+     var d = document.querySelector('div#luffy')
+     p1.style.background='green'
+     p2.style.background='yellow'
+     d.style.color = 'black'
+    </script> 
+    
+    <script>
+          var a = document.querySelector('div#luffy')
+          var b = document.getElementsByTagName('p')[0]
+          a.addEventListener('click',clicar)
+          a.addEventListener('mouseenter',entrar)
+          a.addEventListener('mouseout',sair)
+          
+
+         
+        function clicar() {
+            a.style.color= 'red'
+            a.innerText='NÃO'
+            }
+
+        function entrar(){
+            a.innerText='?'
+            }
+
+        function sair(){
+          a.innerText='Luffy irá permitir?'
+          a.style.color='black'
+          }
+         
+    </script>     
+    
+</body>
+</html>

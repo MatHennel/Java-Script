@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{
+            background-color:mistyrose;
+            font: normal 18pt Arial;
+        }
+        input#butao{
+            font:normal 18pt arial;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+     <h1>Radar</h1>
+     <strong>Coloque seu nome:</strong> <input type="text" name="nome" id="nome">
+     <strong><br><br>Coloque sua velocidade:</strong> <input type="number" name="n" id="n"> <strong>Km/h<br><br></strong>
+     <input type="button" value="Ok" onclick="clicar()" id="butao">
+     <div id="res"><br/>Sua velocidade é:</div>
+     <script>
+           function clicar(){
+            var a = document.querySelector('input#nome').value
+            var tsn = document.querySelector('input#n')
+            var n = Number(tsn.value)        
+            var res = document.querySelector('div#res')
+            res.innerHTML = `<br/>Sr/Sra ${a} a sua velocidade é ${n} Km/h`
+            if(n>80){
+                res.innerHTML += '<p><strong>Voce está multado</strong></br>'
+            }
+            res.innerHTML += '<p><strong>Dirija com cuidado</strong></p>'
+
+         }
+     </script>
+</body>
+</html>

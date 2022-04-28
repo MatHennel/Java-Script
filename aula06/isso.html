@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foda</title>
+    <style>
+        body{
+            background-color: aqua;
+            font:normal 20pt Arial
+        }
+        h1{
+            font:normal arial;
+            color: burlywood;
+        }
+        div#parado{
+            background-color: coral;
+            color: crimson;
+            font: normal 20pt arial black;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#andar{
+            background-color:darkkhaki;
+            color: black;
+            font: normal 20pt italic;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+      <h1>COREEEEEEEE</h1>
+      <p>dadaksdnakfnkjnkjsngksdjgnskjdnksjdfnkdsjfnskdjgnksjgnjsk</p>
+      <br/>
+      <br/>
+      <p>njsdjosjfosdjfoisdjfoisdjfoisjgisdghijsdfhijsdfosdfjsdkfjls</p>
+      <div id='parado'>PARADO</div>
+      <div id='andar'>ANDE</div>
+      <input type="number" name="nu1" id="nu1">
+      <input type="number" name="nu2" id="nu2">
+      <input type="button" value="somar" onclick="somar()">
+      <div id="res">Resultado</div>
+
+      <script>
+          var d1 = document.querySelector('div#parado')
+          var d2 = document.getElementById('andar')
+          d1.addEventListener('click',clicar)
+          d1.addEventListener('mouseenter',entrar)
+          d1.addEventListener('mouseout',sair)
+          d2.addEventListener('click',clicar1)
+          d2.addEventListener('mouseenter',entrar1)
+          d2.addEventListener('mouseout',sair1)
+
+          function entrar(){
+              d1.innerText = 'fica frio ai'
+          }
+          function clicar(){
+              d1.innerText = 'eh o gelado'
+          }
+          function sair(){
+              d1.innerText= 'PARADO'
+          }
+          function entrar1(){
+              d2.innerText = '?'
+          }
+          function clicar1(){
+              d2.style.background = 'purple'
+          }
+          function sair1(){
+              d2.style.background = 'darkkhaki'
+              d2.innerText='ANDE'
+          }
+          function somar(){
+              var tn1 = document.querySelector('input#nu1')
+              var tn2 = document.querySelector('input#nu2')
+              var res = document.querySelector('div#res')
+              var n1 = Number(tn1.value)
+              var n2 = Number(tn2.value)
+              var s = n1 + n2
+              res.innerText = `A soma de ${n1} e ${n2} é igual a ${s}`
+
+          }
+         
+      </script>
+</body>
+</html>

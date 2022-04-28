@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"></div>
+    
+    <script>
+        var agora = new Date()
+        var diaSem = agora.getDay()
+        var a = document.querySelector('div#a')
+
+        switch(diaSem){
+            case 0:
+                a.innerHTML = 'Hoje é domingo'
+                break
+            case 1:
+                a.innerHTML = 'Hoje é segunda'
+                break
+            case 2:
+                a.innerHTML = 'Hoje é terça'
+                break
+            case 3:
+                a.innerHTML = 'Hoje é quarta'
+                break
+            case 4: 
+                 a.innerHTML = 'Hoje é quinta'
+                 break
+            case 5:
+                a.innerHTML = 'Hoje é sexta'
+                break
+            case 6: 
+                 a.innerHTML = 'Hoje é sábado'
+                 break
+        }
+    </script>
+</body>
+</html>
